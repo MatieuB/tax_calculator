@@ -1,6 +1,6 @@
 module.exports = {
 
-     function taxCalculator(num) {
+    calcTax: function(num) {
        var tax = 0;
        if(num > 0 && num <= 10) {
          tax = num * 0.1;
@@ -16,8 +16,8 @@ module.exports = {
        }
        if (num > 30) {
          tax = 2.2 + ((num-30) * 0.03);
-         console.log(tax);
+         return (tax);
        }
-     };
+     }
 
   };
