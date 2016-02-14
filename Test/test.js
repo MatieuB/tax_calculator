@@ -1,7 +1,7 @@
 var code = require('../main');
 var expect = require('chai').expect;
 
-describe("Tax Calculator", function (){
+describe("Tax Calculator", function(num){
   expect(code.calcTax(10)).to.equal(1);
   });
   it('should tax 10% on the first $10', function() {
@@ -22,4 +22,7 @@ describe("Tax Calculator", function (){
   it('should tax 3% above $30', function() {
     expect(code.calcTax(33)).to.equal(2.29);
     expect(code.calcTax(109)).to.equal(4.57);
+  });
+  it('return a string if num is below 0', function() {
+    expect(code.calcTax(-20)).to.equal("Looks more like a refund to me.");
   });

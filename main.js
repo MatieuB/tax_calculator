@@ -18,6 +18,9 @@ module.exports = {
          tax = 2.2 + ((num-30) * 0.03);
          return (tax);
        }
+       if(num < 0) {
+         return "Looks more like a refund to me.";
+       }
      }
 
   };
